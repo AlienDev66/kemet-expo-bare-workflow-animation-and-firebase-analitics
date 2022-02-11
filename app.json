@@ -1,0 +1,12 @@
+{
+  "name": "kemet",
+  "displayName": "kemet",
+  "expo": {
+    "name": "kemet",
+    "slug": "kemet",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
