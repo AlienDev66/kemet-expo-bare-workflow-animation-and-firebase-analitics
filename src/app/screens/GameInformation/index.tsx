@@ -17,13 +17,19 @@ import {
   HoursContainer,
   Hour,
   Simbol,
-  Footer
+  Footer,
+  PeoplePayingList,
+  PeoplePlayingHeader,
+  HeaderName,
+  Button,
+  Content,
 } from "./styles";
 
 import LottieView from "lottie-react-native";
 
 import LogoImg from "../../assets/logo.png";
 import BannerInfo from "../../assets/banner_info.png";
+import { PlayerList } from "../../components/PlayerList";
 
 export const GameInformation = () => {
   return (
@@ -44,23 +50,68 @@ export const GameInformation = () => {
           </BannerContainer>
         </LogoContainer>
       </Header>
-      <Description>
-        <InformationContainer>
-          <Title>Cyberpunk</Title>
-          <Disponible>
-            <Dot></Dot>
-            <Label>Disponível</Label>
-          </Disponible>
-        </InformationContainer>
-        <HoursContainer>
-          <Hour>05</Hour>
-          <Simbol>HS</Simbol>
-        </HoursContainer>
-      </Description>
 
-      <Footer>
+      <Content>
+        <Description>
+          <InformationContainer>
+            <Title>Cyberpunk</Title>
+            <Disponible>
+              <Dot></Dot>
+              <Label>Disponível</Label>
+            </Disponible>
+          </InformationContainer>
+          <HoursContainer>
+            <Hour>05</Hour>
+            <Simbol>HS</Simbol>
+          </HoursContainer>
+        </Description>
 
-      </Footer>
+        <PeoplePayingList>
+          <PeoplePlayingHeader>
+            <HeaderName>Pessoas jogando</HeaderName>
+          </PeoplePlayingHeader>
+          <PlayerList
+            name="AlienDev66"
+            image="https://github.com/AlienDev66.png"
+          />
+
+          <PlayerList
+            name="AlienDev66"
+            image="https://github.com/AlienDev66.png"
+          />
+
+          <PlayerList
+            name="AlienDev66"
+            image="https://github.com/AlienDev66.png"
+          />
+
+          <PlayerList
+            name="AlienDev66"
+            image="https://github.com/AlienDev66.png"
+          />
+
+          <PlayerList
+            name="AlienDev66"
+            image="https://github.com/AlienDev66.png"
+          />
+
+          <PlayerList
+            name="AlienDev66"
+            image="https://github.com/AlienDev66.png"
+          />
+        </PeoplePayingList>
+
+        <Footer>
+          <Button>
+            <LottieView
+              source={require("../../assets/animations/play.json")}
+              autoPlay
+              loop
+              style={{ width: 100 }}
+            />
+          </Button>
+        </Footer>
+      </Content>
     </Container>
   );
 };

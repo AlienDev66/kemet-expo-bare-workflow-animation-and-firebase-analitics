@@ -1,5 +1,8 @@
 import styled from "styled-components/native";
-import { getStatusBarHeight } from "react-native-iphone-x-helper";
+import {
+  getBottomSpace,
+  getStatusBarHeight,
+} from "react-native-iphone-x-helper";
 import { LinearGradient } from "expo-linear-gradient";
 import theme from "../../global/styles/theme";
 import { RFValue } from "react-native-responsive-fontsize";
@@ -81,4 +84,22 @@ export const Simbol = styled.Text`
   font-family: ${({ theme }) => theme.fonts.bold};
   font-size: ${RFValue(18)}px;
 `;
-export const Footer = styled.View``;
+export const Footer = styled.View`
+  align-items: center;
+`;
+export const PeoplePayingList = styled.View`
+  margin-top: 34px;
+`;
+export const PeoplePlayingHeader = styled.View``;
+export const HeaderName = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.bold};
+  font-size: ${RFValue(18)}px;
+  color: ${({ theme }) => theme.colors.text};
+  margin-bottom: 13px;
+`;
+export const Button = styled.TouchableOpacity`
+  padding-bottom: ${getBottomSpace() + 10}px;
+`;
+export const Content = styled.View.attrs({
+  paddingHorizontal: 10,
+})``;
