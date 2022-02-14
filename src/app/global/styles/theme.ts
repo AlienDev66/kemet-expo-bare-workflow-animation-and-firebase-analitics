@@ -1,10 +1,10 @@
 export default {
   colors: {
-    primary: "#080708",
-    background: "#080708",
+    primary: "#13123A",
+    background: "#13123A",
 
     secondary: "#DD946D",
-    text: "#DD946D",
+    text: "#DDE3F0",
 
     button: "#4A322A",
     default: "#4A322A",
@@ -13,6 +13,7 @@ export default {
   },
 
   fonts: {
-    regular: "CaesarDressing_400Regular",
+    regular: "Inter_400Regular",
+    bold: "Orbitron_700Bold",
   },
 };

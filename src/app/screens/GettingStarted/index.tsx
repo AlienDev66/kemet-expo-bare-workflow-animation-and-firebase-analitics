@@ -2,20 +2,23 @@ import React from "react";
 import {
   Container,
   Header,
-  HeaderImage,
   Logo,
   LogoContainer,
-  Title,
+  Middle,
   Footer,
-  FooterImage,
+  Background,
+  Title,
+  Description,
+  Intro,
   Button,
-  ButtonTitle,
 } from "./styles";
-import HeaderImg from "../../assets/headerImg.png";
-import FooterImg from "../../assets/footerImg.png";
-import LogoImg from "../../assets/originalLogo.png";
 import { ScrollView } from "react-native";
 import { CommonActions, useNavigation } from "@react-navigation/native";
+
+import LogoImg from "../../assets/gs_logo.png";
+import NeoBg from "../../assets/neon_bg.png";
+
+import LottieView from "lottie-react-native";
 
 export const GettingStarted = () => {
   const navigation = useNavigation();
@@ -24,26 +27,37 @@ export const GettingStarted = () => {
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       <Container>
         <Header>
-          <HeaderImage source={HeaderImg} />
           <LogoContainer>
             <Logo source={LogoImg} />
-            <Title>CONHEÇA O EDITO</Title>
           </LogoContainer>
         </Header>
-
+        <Middle>
+          <Background source={NeoBg}>
+            <Intro>
+              <Title>Seus jogos mais proximos de ti</Title>
+              <Description>
+                Jogue seus jogos favoritos com todo mundo e ganhe sempre com a
+                nossa plataforma
+              </Description>
+            </Intro>
+          </Background>
+        </Middle>
         <Footer>
-          <FooterImage source={FooterImg}>
-            <Button
-              onPress={() =>
-                navigation.dispatch(
-                  CommonActions.navigate({
-                    name: "Home",
-                  })
-                )
-              }>
-              <ButtonTitle>Getting Started</ButtonTitle>
-            </Button>
-          </FooterImage>
+          <Button
+            onPress={() =>
+              navigation.dispatch(
+                CommonActions.navigate({
+                  name: "Home",
+                })
+              )
+            }>
+            <LottieView
+              source={require("../../assets/animations/buttonAnimation.json")}
+              autoPlay
+              loop
+              style={{ width: 70 }}
+            />
+          </Button>
         </Footer>
       </Container>
     </ScrollView>

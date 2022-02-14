@@ -1209,10 +1209,15 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
-"@expo-google-fonts/caesar-dressing@0.2.2":
+"@expo-google-fonts/inter@^0.2.2":
   version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/caesar-dressing/-/caesar-dressing-0.2.2.tgz#47ec6b9741d15d12f18764ccfef06a45cec21286"
-  integrity sha512-PHocYVFwua7Jltc0cG+bknDRZEzepE+TJ096qZZxb9PtlGwHNPixOcK7p5MT5p1pJbzDBRaD05WNCou3WgqIqA==
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/inter/-/inter-0.2.2.tgz#bd5624be6c92e7621aa9ddb5bd72757604729121"
+  integrity sha512-dU6mSczI2xkRZbUhQQ5VB+D4AqLOF8ufCIfA1iBjrPZ/Qnka88E5Ez2Mvm41exdKR76norVvYD5GJIQYEEoO/Q==
+
+"@expo-google-fonts/orbitron@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/orbitron/-/orbitron-0.2.2.tgz#f5516b08cf8fdfad1733cf9bc83d1e4b6891db3f"
+  integrity sha512-QsDOb3AOUqoM2l5eonr/m4hByiwp0MuJrgRUpmTNcYfK6oc3+JDsUqnHbLazMZjBBHAUf+iJky7t7KG3oW4yMg==
 
 "@expo/config-plugins@1.0.33", "@expo/config-plugins@^1.0.18":
   version "1.0.33"
