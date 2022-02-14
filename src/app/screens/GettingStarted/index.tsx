@@ -15,8 +15,11 @@ import HeaderImg from "../../assets/headerImg.png";
 import FooterImg from "../../assets/footerImg.png";
 import LogoImg from "../../assets/originalLogo.png";
 import { ScrollView } from "react-native";
+import { CommonActions, useNavigation } from "@react-navigation/native";
 
 export const GettingStarted = () => {
+  const navigation = useNavigation();
+
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       <Container>
@@ -30,7 +33,14 @@ export const GettingStarted = () => {
 
         <Footer>
           <FooterImage source={FooterImg}>
-            <Button>
+            <Button
+              onPress={() =>
+                navigation.dispatch(
+                  CommonActions.navigate({
+                    name: "Home",
+                  })
+                )
+              }>
               <ButtonTitle>Getting Started</ButtonTitle>
             </Button>
           </FooterImage>
