@@ -4,23 +4,31 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled(RectButton)`
   height: 102px;
-  background-color: ${({ theme }) => theme.colors.default};
+  background-color: ${({ theme }) => theme.colors.primary};
   flex-direction: row;
   border-radius: 12px;
   align-items: center;
 `;
-export const KemetImage = styled.Image`
-  width: 74px;
-  height: 98px;
-  border-radius: 12px;
+export const ImageContaner = styled.View``;
+export const GameImage = styled.Image`
+  width: 64px;
+  height: 68px;
 `;
-export const ImageContainer = styled.View`
-  margin-left: 2px;
+export const GameInformation = styled.View`
+  width: 260px;
+  height: 60px;
+  margin-left: 20px;
+  border-bottom-width: 2px;
+  border-bottom-color: ${({ theme }) => theme.colors.secondary};
 `;
-export const DescriptionContainer = styled.View``;
 export const Title = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.regular};
+  font-family: ${({ theme }) => theme.fonts.bold};
   color: ${({ theme }) => theme.colors.text};
-  font-size: ${RFValue(12)}px;
+  font-size: ${RFValue(18)}px;
+  margin-bottom: 12px;
 `;
-export const Description = styled.Text``;
+export const Description = styled.Text`
+  color: ${({ theme }) => theme.colors.text};
+  font-size: ${RFValue(13)}px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+`;

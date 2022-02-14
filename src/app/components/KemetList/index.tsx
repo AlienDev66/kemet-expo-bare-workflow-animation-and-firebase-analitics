@@ -2,27 +2,25 @@ import React from "react";
 
 import {
   Container,
-  KemetImage,
-  ImageContainer,
-  DescriptionContainer,
+  ImageContaner,
+  GameImage,
+  GameInformation,
   Title,
   Description,
 } from "./styles";
-import KemetImg from "../../assets/KemetImg.png";
 
-export const KemetList = () => {
+import GameImg from "../../assets/legend.png";
+
+export const GameList = () => {
   return (
     <Container>
-      <ImageContainer>
-        <KemetImage source={KemetImg} />
-      </ImageContainer>
-      <DescriptionContainer>
-        <Title>Conheça cleopatra</Title>
-        <Description>
-          Pessoa que foi raptada hoje de manhã e ninguém sabe de nada, por isso,
-          vamos procurar ela.
-        </Description>
-      </DescriptionContainer>
+      <ImageContaner>
+        <GameImage source={GameImg} />
+      </ImageContaner>
+      <GameInformation>
+        <Title>Lendários</Title>
+        <Description>Lançamento: 18/06 às 21:00h</Description>
+      </GameInformation>
     </Container>
   );
 };

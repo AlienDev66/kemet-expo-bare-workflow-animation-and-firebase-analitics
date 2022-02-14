@@ -3,47 +3,62 @@ import React from "react";
 import {
   Container,
   Header,
-  Body,
-  Background,
-  Logo,
   LogoContainer,
-  Gradient,
-  HomeImageContainer,
-  HomeImage,
-  Separator,
-  SeparatorContainer,
-  List,
+  Logo,
+  BannerImage,
+  Banner,
+  GameListContainer,
+  HeaderList,
+  HeaderTitle,
+  TotalGames,
 } from "./styles";
-
-import homeHeaderImg from "../../assets/homeHeaderImg.png";
-import LogoImg from "../../assets/originalLogo.png";
-import CleopatraImg from "../../assets/cleopatra.png";
-import SeparatorImg from "../../assets/separator.png";
-import { KemetList } from "../../components/KemetList";
+import LottieView from "lottie-react-native";
+import LogoImg from "../../assets/logo.png";
+import HomeImage from "../../assets/homeImage.png";
+import { GameList } from "../../components/KemetList";
+import { useNavigation, CommonActions } from "@react-navigation/native";
 
 export const Home = () => {
+  const navigation = useNavigation();
+
   return (
     <Container>
       <Header>
-        <Background source={homeHeaderImg}>
-          <LogoContainer>
-            <Logo source={LogoImg} />
-          </LogoContainer>
-          <HomeImageContainer>
-            <HomeImage source={CleopatraImg}>
-              <Gradient></Gradient>
-            </HomeImage>
-          </HomeImageContainer>
-        </Background>
+        <LogoContainer>
+          <Logo source={LogoImg} />
+          <LottieView
+            source={require("../../assets/animations/home.json")}
+            autoPlay
+            loop
+            style={{ width: 190 }}
+          />
+        </LogoContainer>
+        <Banner
+          onPress={() =>
+            navigation.dispatch(
+              CommonActions.navigate({
+                name: "GameInformation",
+              })
+            )
+          }>
+          <BannerImage source={HomeImage} />
+        </Banner>
       </Header>
-      <SeparatorContainer>
-        <Separator source={SeparatorImg} />
-      </SeparatorContainer>
-      <Body>
-        <List>
-          <KemetList />
-        </List>
-      </Body>
+      <GameListContainer>
+        <HeaderList>
+          <HeaderTitle>Olhe seus games</HeaderTitle>
+          <TotalGames>Total 6</TotalGames>
+        </HeaderList>
+        <GameList />
+        <GameList />
+        <GameList />
+        <GameList />
+        <GameList />
+        <GameList />
+        <GameList />
+        <GameList />
+        <GameList />
+      </GameListContainer>
     </Container>
   );
 };

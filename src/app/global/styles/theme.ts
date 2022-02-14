@@ -1,15 +1,14 @@
 export default {
   colors: {
     primary: "#13123A",
+    secondary: "#1D2766",
     background: "#13123A",
 
-    secondary: "#DD946D",
     text: "#DDE3F0",
 
-    button: "#4A322A",
-    default: "#4A322A",
-
     shape: "#fff",
+
+    success: "#00FF37",
   },
 
   fonts: {
